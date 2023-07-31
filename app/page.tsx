@@ -36,17 +36,20 @@ export default function Page() {
 	return (
 		<main className="w-full min-h-screen font-sans text-gray-900 overflow-hidden">
 			<div className="bg-gradient-to-b from-[#FEE6F7] to-white">
-				<img
-					src="`/img/blob.svg`"
+				<Image
+					src={"/img/blob.svg"}
 					alt=""
+					height={300}
+					width={300}
 					className="absolute top-0 right-0 pointer-events-none"
 				/>
 				<div className="px-6 mx-auto max-w-6xl">
 					<div className="flex justify-between items-center py-10">
 						<Image src={Logo} alt="Logo" height={24} width={120} />
 						<nav className="hidden md:flex md:items-center md:space-x-10">
-							{menu.map((item) => (
+							{menu.map((item, i) => (
 								<a
+									key={i}
 									href="#"
 									className="text-gray-700 hover:text-gray-900"
 								>
@@ -108,7 +111,12 @@ export default function Page() {
 							</div>
 						</div>
 						<div className="flex items-end w-1/2 border-b border-gray-400">
-							<img src="`/img/illustration.svg`" alt="" />
+							<Image
+								src={"/img/illustration.svg"}
+								alt=""
+								height={300}
+								width={300}
+							/>
 						</div>
 					</div>
 				</div>
@@ -116,9 +124,9 @@ export default function Page() {
 			<div className="bg-gray-50">
 				<div className="py-12 px-6 mx-auto max-w-6xl">
 					<div className="flex flex-col gap-5 md:flex-row">
-						{features.map((feature) => (
+						{features.map((feature, i) => (
 							<div
-								v-for="feature in features"
+								key={i}
 								className="flex flex-col p-8 space-y-4 bg-white rounded-lg border border-gray-200 transition-shadow duration-500 ease-out cursor-pointer hover:shadow-xl"
 							>
 								<div className="flex items-center space-x-3">
@@ -202,9 +210,9 @@ export default function Page() {
 										fill="currentColor"
 									>
 										<path
-											fill-rule="evenodd"
+											fillRule="evenodd"
 											d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
-											clip-rule="evenodd"
+											clipRule="evenodd"
 										/>
 									</svg>
 
@@ -221,9 +229,9 @@ export default function Page() {
 										fill="currentColor"
 									>
 										<path
-											fill-rule="evenodd"
+											fillRule="evenodd"
 											d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
-											clip-rule="evenodd"
+											clipRule="evenodd"
 										/>
 									</svg>
 
@@ -240,9 +248,9 @@ export default function Page() {
 										fill="currentColor"
 									>
 										<path
-											fill-rule="evenodd"
+											fillRule="evenodd"
 											d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
-											clip-rule="evenodd"
+											clipRule="evenodd"
 										/>
 									</svg>
 
@@ -259,9 +267,9 @@ export default function Page() {
 										fill="currentColor"
 									>
 										<path
-											fill-rule="evenodd"
+											fillRule="evenodd"
 											d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
-											clip-rule="evenodd"
+											clipRule="evenodd"
 										/>
 									</svg>
 
@@ -278,9 +286,9 @@ export default function Page() {
 										fill="currentColor"
 									>
 										<path
-											fill-rule="evenodd"
+											fillRule="evenodd"
 											d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
-											clip-rule="evenodd"
+											clipRule="evenodd"
 										/>
 									</svg>
 
@@ -321,9 +329,9 @@ export default function Page() {
 										fill="currentColor"
 									>
 										<path
-											fill-rule="evenodd"
+											fillRule="evenodd"
 											d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
-											clip-rule="evenodd"
+											clipRule="evenodd"
 										/>
 									</svg>
 
@@ -340,9 +348,9 @@ export default function Page() {
 										fill="currentColor"
 									>
 										<path
-											fill-rule="evenodd"
+											fillRule="evenodd"
 											d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
-											clip-rule="evenodd"
+											clipRule="evenodd"
 										/>
 									</svg>
 
@@ -359,9 +367,9 @@ export default function Page() {
 										fill="currentColor"
 									>
 										<path
-											fill-rule="evenodd"
+											fillRule="evenodd"
 											d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
-											clip-rule="evenodd"
+											clipRule="evenodd"
 										/>
 									</svg>
 
@@ -378,9 +386,9 @@ export default function Page() {
 										fill="currentColor"
 									>
 										<path
-											fill-rule="evenodd"
+											fillRule="evenodd"
 											d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
-											clip-rule="evenodd"
+											clipRule="evenodd"
 										/>
 									</svg>
 
@@ -397,9 +405,9 @@ export default function Page() {
 										fill="currentColor"
 									>
 										<path
-											fill-rule="evenodd"
+											fillRule="evenodd"
 											d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
-											clip-rule="evenodd"
+											clipRule="evenodd"
 										/>
 									</svg>
 
@@ -440,9 +448,9 @@ export default function Page() {
 										fill="currentColor"
 									>
 										<path
-											fill-rule="evenodd"
+											fillRule="evenodd"
 											d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
-											clip-rule="evenodd"
+											clipRule="evenodd"
 										/>
 									</svg>
 
@@ -459,9 +467,9 @@ export default function Page() {
 										fill="currentColor"
 									>
 										<path
-											fill-rule="evenodd"
+											fillRule="evenodd"
 											d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
-											clip-rule="evenodd"
+											clipRule="evenodd"
 										/>
 									</svg>
 
@@ -478,9 +486,9 @@ export default function Page() {
 										fill="currentColor"
 									>
 										<path
-											fill-rule="evenodd"
+											fillRule="evenodd"
 											d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
-											clip-rule="evenodd"
+											clipRule="evenodd"
 										/>
 									</svg>
 
@@ -497,9 +505,9 @@ export default function Page() {
 										fill="currentColor"
 									>
 										<path
-											fill-rule="evenodd"
+											fillRule="evenodd"
 											d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
-											clip-rule="evenodd"
+											clipRule="evenodd"
 										/>
 									</svg>
 
@@ -516,9 +524,9 @@ export default function Page() {
 										fill="currentColor"
 									>
 										<path
-											fill-rule="evenodd"
+											fillRule="evenodd"
 											d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
-											clip-rule="evenodd"
+											clipRule="evenodd"
 										/>
 									</svg>
 
@@ -553,9 +561,9 @@ export default function Page() {
 									stroke="currentColor"
 								>
 									<path
-										stroke-linecap="round"
-										stroke-linejoin="round"
-										stroke-width="2"
+										strokeLinecap="round"
+										strokeLinejoin="round"
+										strokeWidth="2"
 										d="M8.228 9c.549-1.165 2.03-2 3.772-2 2.21 0 4 1.343 4 3 0 1.4-1.278 2.575-3.006 2.907-.542.104-.994.54-.994 1.093m0 3h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"
 									/>
 								</svg>
@@ -588,9 +596,9 @@ export default function Page() {
 									stroke="currentColor"
 								>
 									<path
-										stroke-linecap="round"
-										stroke-linejoin="round"
-										stroke-width="2"
+										strokeLinecap="round"
+										strokeLinejoin="round"
+										strokeWidth="2"
 										d="M8.228 9c.549-1.165 2.03-2 3.772-2 2.21 0 4 1.343 4 3 0 1.4-1.278 2.575-3.006 2.907-.542.104-.994.54-.994 1.093m0 3h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"
 									/>
 								</svg>
@@ -623,9 +631,9 @@ export default function Page() {
 									stroke="currentColor"
 								>
 									<path
-										stroke-linecap="round"
-										stroke-linejoin="round"
-										stroke-width="2"
+										strokeLinecap="round"
+										strokeLinejoin="round"
+										strokeWidth="2"
 										d="M8.228 9c.549-1.165 2.03-2 3.772-2 2.21 0 4 1.343 4 3 0 1.4-1.278 2.575-3.006 2.907-.542.104-.994.54-.994 1.093m0 3h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"
 									/>
 								</svg>
@@ -658,9 +666,9 @@ export default function Page() {
 									stroke="currentColor"
 								>
 									<path
-										stroke-linecap="round"
-										stroke-linejoin="round"
-										stroke-width="2"
+										strokeLinecap="round"
+										strokeLinejoin="round"
+										strokeWidth="2"
 										d="M8.228 9c.549-1.165 2.03-2 3.772-2 2.21 0 4 1.343 4 3 0 1.4-1.278 2.575-3.006 2.907-.542.104-.994.54-.994 1.093m0 3h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"
 									/>
 								</svg>
@@ -694,9 +702,9 @@ export default function Page() {
 									stroke="currentColor"
 								>
 									<path
-										stroke-linecap="round"
-										stroke-linejoin="round"
-										stroke-width="2"
+										strokeLinecap="round"
+										strokeLinejoin="round"
+										strokeWidth="2"
 										d="M8.228 9c.549-1.165 2.03-2 3.772-2 2.21 0 4 1.343 4 3 0 1.4-1.278 2.575-3.006 2.907-.542.104-.994.54-.994 1.093m0 3h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"
 									/>
 								</svg>
@@ -729,9 +737,9 @@ export default function Page() {
 									stroke="currentColor"
 								>
 									<path
-										stroke-linecap="round"
-										stroke-linejoin="round"
-										stroke-width="2"
+										strokeLinecap="round"
+										strokeLinejoin="round"
+										strokeWidth="2"
 										d="M8.228 9c.549-1.165 2.03-2 3.772-2 2.21 0 4 1.343 4 3 0 1.4-1.278 2.575-3.006 2.907-.542.104-.994.54-.994 1.093m0 3h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"
 									/>
 								</svg>
